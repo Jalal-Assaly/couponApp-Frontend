@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CouponHomeComponent } from './coupon-home/coupon-home.component';
 
-import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { TableModule } from 'primeng/table';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    TableModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <p-table [value]="coupons" [tableStyle]="{ 'min-width': '50rem' }">
+  <table>
     <ng-template pTemplate="header">
         <tr>
           <th (click)="sort('id')">ID</th>
@@ -28,6 +28,6 @@
           <td>{{coupon.expiryDate}}</td>
         </tr>
     </ng-template>
-  </p-table>
+  </table>
 </body>
 </html>
