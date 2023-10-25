@@ -6,28 +6,7 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-  <table>
-    <ng-template pTemplate="header">
-        <tr>
-          <th (click)="sort('id')">ID</th>
-          <th (click)="sort('code')">Coupon Code</th>
-          <th (click)="sort('maxUsages')">Maximum Usages</th>
-          <th (click)="sort('type')">Type</th>
-          <th (click)="sort('discount')">Discount</th>
-          <th (click)="sort('expiryDate')">Expiry Date</th>
-        </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-coupon>
-        <tr>
-          <td>{{coupon.id}}</td>
-          <td>{{coupon.code}}</td>
-          <td>{{coupon.maxUsages}}</td>
-          <td>{{coupon.type}}</td>
-          <td>{{coupon.discount}}</td>
-          <td>{{coupon.expiryDate}}</td>
-        </tr>
-    </ng-template>
-  </table>
+<body>  
+  <router-outlet></router-outlet>
 </body>
 </html>

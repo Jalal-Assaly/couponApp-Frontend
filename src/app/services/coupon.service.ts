@@ -15,12 +15,7 @@ export class CouponService {
 
   // Subscriber functions
   public getAllCoupons(): Observable<Coupon[]> {
-    console.log(this.apiServerUrl);
     return this.http.get<Coupon[]>(`${this.apiServerUrl}/list`);
-  }
-
-  public getCouponById(id: number): Observable<Coupon> {
-    return this.http.get<Coupon>(`${this.apiServerUrl}/find/${id}`);
   }
 
   public addFixedCoupon(coupon: Coupon): Observable<Coupon> {
@@ -39,7 +34,7 @@ export class CouponService {
     return this.http.put<void>(`${this.apiServerUrl}/update/percentage/${id}`, coupon)
   }
 
-  public updateCoupon(id:number, coupon: Coupon): Observable<void> {
+  public deleteCoupon(id:number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/delete/${id}`)
   }
 }
